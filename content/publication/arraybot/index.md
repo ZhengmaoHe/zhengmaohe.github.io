@@ -1,7 +1,12 @@
 ---
 title: "ArrayBot: Reinforcement Learning for Generalizable Distributed Manipulation through Touch"
 date: "2023-11-07T00:00:00"
-url: "www.steven-xzr.github.io/ArrayBot"
+# url: 
+
+# Custom links (uncomment lines below)
+links:
+- name: Custom Link
+  url: www.steven-xzr.github.io/ArrayBot
 
 authors:
 - Zhengrong Xue*
