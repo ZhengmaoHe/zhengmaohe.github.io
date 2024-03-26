@@ -1,11 +1,11 @@
 ---
 title: "Uni-O4: Unifying Online and Offline Deep Reinforcement Learning with Multi-Step On-Policy Optimization"
 date: "2023-11-08T00:00:00"
-url: "github.com/Lei-Kun/Uni-o4"
+url: "www.github.com/Lei-Kun/Uni-o4"
 
 authors:
 - Kun Lei
-- Zhengmao* 
+- Zhengmao He* 
 - Chenhao Lu*
 - Kaizhe Hu
 - Yang Gao
