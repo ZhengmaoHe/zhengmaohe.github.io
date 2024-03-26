@@ -20,7 +20,7 @@ superuser: true
 role: M.Phil, HKUST(GZ)
 
 organizations:
-  - name: zhmaohe@gmail.com
+  - name: zhmaohe at gmail dot com
 
 
 # Organizations/Affiliations to show in About widget
