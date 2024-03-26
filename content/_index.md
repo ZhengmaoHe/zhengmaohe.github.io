@@ -146,7 +146,7 @@ sections:
       #     tag: Demo
     design:
       # Choose how many columns the section has. Valid values: '1' or '2'.
-      columns: '1'
+      columns: '2'
       view: card
       # For Showcase view, flip alternate rows?
       flip_alt_rows: true
@@ -161,28 +161,28 @@ sections:
   - block: collection
     id: featured
     content:
-      title: Featured Publications
+      title: Recent Publications
       filters:
         folders:
           - publication
         featured_only: true
     design:
       columns: '2'
-      view: citation
-  - block: collection
-    content:
-      title: Recent Publications
-      text: |-
-        {{% callout note %}}
-        Quickly discover relevant content by [filtering publications](./publication/).
-        {{% /callout %}}
-      filters:
-        folders:
-          - publication
-        exclude_featured: true
-    design:
-      columns: '2'
-      view: citation
+      view: compact
+  # - block: collection
+  #   content:
+  #     title: Recent Publications
+  #     text: |-
+  #       {{% callout note %}}
+  #       Quickly discover relevant content by [filtering publications](./publication/).
+  #       {{% /callout %}}
+  #     filters:
+  #       folders:
+  #         - publication
+  #       exclude_featured: true
+  #   design:
+  #     columns: '2'
+  #     view: citation
   # - block: collection
   #   id: talks
   #   content:
