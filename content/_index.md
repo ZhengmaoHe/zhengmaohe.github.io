@@ -147,9 +147,9 @@ sections:
     design:
       # Choose how many columns the section has. Valid values: '1' or '2'.
       columns: '1'
-      view: showcase
+      view: card
       # For Showcase view, flip alternate rows?
-      flip_alt_rows: false
+      flip_alt_rows: true
   # - block: markdown
   #   content:
   #     title: Gallery
@@ -168,7 +168,7 @@ sections:
         featured_only: true
     design:
       columns: '2'
-      view: card
+      view: citation
   - block: collection
     content:
       title: Recent Publications
