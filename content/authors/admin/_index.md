@@ -19,6 +19,10 @@ superuser: true
 # Role/position/tagline
 role: M.Phil, HKUST(GZ)
 
+organizations:
+  - name: zhmaohe@gmail.com
+
+
 # Organizations/Affiliations to show in About widget
 # organizations:
 #   - name: Stanford University
