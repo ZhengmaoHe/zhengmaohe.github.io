@@ -1,7 +1,7 @@
 ---
-title: Optimization-Based Wheeled-Bipedal Robot
+title: Optimization-Based Wheeled-Bipedal Robot-Graduation Project
 date: 2023-08-29T00:00:00.000Z
-summary: My graduation project
+summary: A wheeled bipedal robot capable of overcoming challenging terrain.
 links:
   - icon_pack: fab
     icon: github

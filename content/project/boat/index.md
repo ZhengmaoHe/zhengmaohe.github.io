@@ -1,7 +1,7 @@
 ---
 title: Yolov4-Assisted Unmanned Surface Waste Collection Vessel - Electric Control Group Leader
 date: 2023-08-29T00:00:00.000Z
-summary: An unmanned ship was successfully delivered to Guangzhou River Management Center and put into use
+summary: An unmanned ship was successfully delivered to Guangzhou River Management Center and put into use.
 ---
 
 1. Preliminary work

@@ -1,5 +1,5 @@
 ---
-title: Motion algorithm of quadruped robot with 12-DOF parallel legs
+title: A quadruped robot with 12-DOF parallel legs
 date: 2023-08-29T00:00:00.000Z
 summary: " "
 ---

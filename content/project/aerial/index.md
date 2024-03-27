@@ -1,7 +1,7 @@
 ---
-title: Large-scale Aerial Robot Based On Visual Aid - R&D Representative
+title: Large Drone Robot Based On Visual Aid - R&D Representative
 date: 2023-08-29T00:00:00.000Z
-summary: A six-axis drone with a diameter of 170cm that can shoot rubber projectiles
+summary: A six-axis drone with a diameter of 170cm that can hover in the air and firing rubber bullets.
 # tags:
 # links:
 #   - icon_pack: fab
