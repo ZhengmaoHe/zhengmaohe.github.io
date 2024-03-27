@@ -1,7 +1,7 @@
 ---
 title: AGV with six axis robotic arm
 date: 2023-08-29T00:00:00.000Z
-summary: A six-axis robotic arm logistics robot with a mecanum wheel chassis
+summary: A mobile manipulator with pneumatic suction cups that can automatically perform pick and place tasks
 ---
 1. Kinematics solution of six-axis robotic arm
 2. Kinematics Calculation of Mecanum Wheel Chassis
