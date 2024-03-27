@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Finetuning Offline World Models in the Real World">
+  <meta name="keywords" content="Model-Based RL, Real-world Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finetuning Offline World Models in the Real World</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DRC2LCES8"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3DRC2LCES8');
+  </script>
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:500,600,600' type="text/css">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Finetuning Offline World Models in the Real World</h1>
+          <!-- <h2>CoRL 2023 (Oral)</h2> -->
+          <!-- corl -->
+          <h1 class="is-size-4 publication-venue has-text-centered">
+            <span style="color:#7b509a;font-weight:bolder;">CoRL 2023</span> <span style="color:#b44d92;font-weight:bolder;">(Oral)</span>
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yunhaifeng.com">Yunhai Feng</a><sup>1</sup>*,</span>
+            <span class="author-block">
+              <a href="https://nicklashansen.github.io">Nicklas Hansen</a><sup>1</sup>*,</span>
+            <span class="author-block">
+              <a href="https://ziyanx02.github.io">Ziyan Xiong</a><sup>12</sup>*,
+            </span>
+            <span class="author-block">
+              <a href="https://chamorajg.github.io">Chandramouli Rajagopalan</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://xiaolonw.github.io">Xiaolong Wang</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>UC San Diego</span>
+            <span class="author-block"><sup>2</sup>Tsinghua University</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">*Equal contribution</span>
+          </div>
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./paper.pdf" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2310.16029" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/fyhMer/fowm" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1nhxpykGtPDhmQKm-_B8zBSywVRdgeVya/view?usp=sharing"
+                    target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset (sim)</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1PRCqANEOV0SICLEWEvUL9AnyJOe2UMYK/view?usp=sharing"
+                    target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset (real)</span>
+                  </a>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <img id="teaser" height="50%" src="./static/images/teaser.png"/> -->
+      <video poster="./static/images/teaser.png" id="teaser_animation" autoplay controls muted playsinline height="100%">
+        <source src="./static/videos/animation.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-justified">
+        We propose a framework for <strong>offline pretraining</strong> and <strong>online finetuning</strong> of world models 
+        directly in the real world. Our method iteratively 
+        collects new data by planning with the learned model, and finetunes the model on a combination of 
+        pre-existing data and newly collected data. Our method can be finetuned few-shot on unseen task 
+        variations in ≤20 trials by leveraging novel test-time regularization during planning.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Reinforcement Learning (RL) is notoriously data-inefficient, which makes training on a real 
+            robot difficult. While model-based RL algorithms <em>(world models)</em> improve data-efficiency 
+            to some extent, they still require hours or days of interaction to learn skills. Recently, 
+            offline RL has been proposed as a framework for training RL policies on <em>pre-existing</em> 
+            datasets without any online interaction. However, constraining an algorithm to a fixed dataset 
+            induces a state-action distribution shift between training and inference, and limits its 
+            applicability to new tasks. In this work, we seek to get the best of both worlds: we consider 
+            the problem of pretraining a world model with offline data collected on a real robot, and then 
+            finetuning the model on online data collected by planning with the learned model. To mitigate 
+            extrapolation errors during online interaction, we propose to regularize the planner 
+            <em>at test-time</em> by balancing estimated returns and (epistemic) model uncertainty. We 
+            evaluate our method on a variety of visuo-motor control tasks in simulation and on a real 
+            robot, and find that our method enables few-shot finetuning to seen and unseen tasks even 
+            when offline data is limited.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section id="main-demonstration">
+  <div class="highlight-video-container content has-text-centered">
+    <div class="container is-max-desktop">
+      <h3 class="video-caption">The following video shows a footage of online finetuning in a kitchen environment, where the goal is to put the pot in the sink. 
+        Note the new objects added to the scene (at trial 21 and 27) and how our model adapts fast to the changes.</h3>
+      <video id="replay-video" autoplay controls muted preload playsinline>
+        <source src="./static/videos/kitchen_demo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop ">
+
+    <h2 class="title is-3">Tasks</h2>
+
+    <p>
+      We consider diverse tasks in simulation (D4RL, xArm, and quadruped locomotion) and on a real xArm robot.
+    </p>
+    <br/>
+    <h3 class="title is-5 has-text-centered is-centered">Real-World Tasks</h3>
+    <div class="container is-rounded interpolation-panel">  
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-real-reach" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/reach0.mp4" type="video/mp4">
+          </video>
+          <p>Reach</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-kitchen" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/task_kitchen.mp4" type="video/mp4">
+          </video>
+          <p>Kitchen</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-real-pick" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/pick0.mp4" type="video/mp4">
+          </video>
+          <p>Pick</p>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <h3 class="title is-5 has-text-centered is-centered">Simulation Tasks</h3>
+    <div class="container is-rounded interpolation-panel">  
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-hopper" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/sim_task_hopper.mp4" type="video/mp4">
+          </video>
+          <p>Hopper</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-antmaze" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/sim_task_antmaze.mp4" type="video/mp4">
+          </video>
+          <p>AntMaze</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-xarm-push" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/sim_task_xarm_push.mp4" type="video/mp4">
+          </video>
+          <p>Push</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-xarm-lift" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/sim_task_xarm_lift.mp4" type="video/mp4">
+          </video>
+          <p>Pick</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-walk" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/sim_task_walk.mp4" type="video/mp4">
+          </video>
+          <p>Walk</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Qualitative Results</h2>
+    <div class="content has-text-justified">
+      <p>
+        Our method can be finetuned few-shot to unseen task variations by online RL, directly in the real world. 
+        We observe a noticable improvement after just a handful of trials.
+      </p>
+      <p>
+        In addition to the few-shot online finetuning footage shown <a href="#main-demonstration">above</a>, 
+        we show more raw footages and finetuned policies for different tasks here.
+      </p>
+    </div>
+    <!-- <div class="highlight-video-container content has-text-centered">
+      <video id="replay-video"
+              controls
+              muted
+              preload
+              playsinline
+              width="90%">
+        <source src="./static/videos/kitchen_demo.mp4"
+                type="video/mp4">
+      </video>
+    </div> -->
+
+    <h5 class="title is-5">Raw Footages</h3>
+      <div class="content columns is-centered has-text-centered">
+        <div class="column">      
+          <p>
+            Reach
+          </p>
+          <video id="reach-finetune-video" autoplay controls muted preload playsinline width="85%">
+            <source src="./static/videos/reach_finetune.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="column">      
+          <p>
+            Pick
+          </p>
+          <video id="lift-finetune-video" autoplay controls muted preload playsinline width="85%">
+            <source src="./static/videos/lift_finetune.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      
+    <!-- <div class="content has-text-centered">
+      Reach
+      <video id="replay-video"
+              controls
+              muted
+              preload
+              playsinline
+              width="40%">
+        <source src="./static/videos/reach_finetune.mp4"
+                type="video/mp4">
+      </video>
+      Pick
+      <video id="replay-video"
+              controls
+              muted
+              preload
+              playsinline
+              width="40%">
+        <source src="./static/videos/lift_finetune.mp4"
+                type="video/mp4">
+      </video>
+    </div> -->
+
+    <h5 class="title is-5">Finetuning Results </h3>
+    <p>
+      Videos are generated by our method after just 20 trials.
+    </p>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          Kitchen
+          <video poster="" id="kitchen0" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/kitchen0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          Kitchen (with distractor)
+          <video poster="" id="kitchen1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/kitchen1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          Pick
+          <video poster="" id="pick0" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/pick0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          Pick (unseen color)
+          <video poster="" id="pick1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/pick1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          Pick (with distractors)
+          <video poster="" id="pick2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/pick2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          Reach
+          <video poster="" id="reach0" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/reach0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          Reach (with distractor)
+          <video poster="" id="reach1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/reach1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          Reach (unseen object)
+          <video poster="" id="reach2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/reach2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Quantitative Results</h2>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        
+
+        <p>
+          <strong>Simulation results.</strong> Success rate (xArm) and normalized return (D4RL and Walk) of methods 
+          before and after online finetuning. Mean of 5 seeds.
+        </p>
+        <br/>
+        <div class="content columns is-vcentered is-rounded">
+          <div class="is-3 has-text-centered">
+            <img src="./static/images/simulation_results.png"
+            width="65%"
+                 alt="Tasks"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <h2 class="title is-3">Real-World Results</h2> -->
+    
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-3">Real-World Results</h2> -->
+          <p>
+            <strong>Real-world offline-to-online results.</strong> 
+            Success rate (%) as a function of online finetuning trials. Mean of 18 trials and 2 seeds.
+          </p>
+          <div class="content columns is-vcentered is-rounded">
+            <div class="is-3 has-text-centered">
+              <img src="./static/images/real_world_off2on_results.png"
+              width="67%"
+                   alt="Tasks"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="columns is-centered">
+          <div class="column content has-text-justified">
+            <p>
+              <strong>Finetuning to unseen real-world tasks.</strong> Success rate (%) of our method for each task variation. 
+              We include 4 successful transfers and 1 failure. Mean of 18 trials and 2 seeds.
+            </p>
+            <div class="content columns is-vcentered is-rounded">
+              <div class="is-3 has-text-centered">
+                <img src="./static/images/real_world_transfer_results.png"
+                width="80%"
+                     alt="Tasks"/>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <p>Our method significantly improves the performance of offline-to-online finetuning of world models, 
+      and achieves high task success rates in both seen and unseen task variations with as few as 20 online trials on a real robot.</p>
+
+
+  </div>
+</section>
+
+
+<section class="section" >
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre class="bibtex"><code>@inproceedings{feng2023finetuning,
+  title={Finetuning Offline World Models in the Real World},
+  author={Feng, Yunhai and Hansen, Nicklas and Xiong, Ziyan and Rajagopalan, Chandramouli and Wang, Xiaolong},
+  booktitle={Proceedings of the 7th Conference on Robot Learning (CoRL)},
+  year={2023}
+}</code></pre>
+  </div>
+
+  <div class="container is-max-desktop content">
+    <h2 class="title">Contact</h2>
+    Feel free to contact <a target="_blank" href="https://yunhaifeng.com">Yunhai Feng</a> if you have any questions on this project.
+  </div>
+</section>
+
+
+<footer class="footer is-centered">
+  <p>
+    Website template adapted from  <a target="_blank" href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>.
+  </p>
+</footer>
+
+</body>
+</html>
