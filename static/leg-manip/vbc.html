@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title style="font-family: Arial, Helvetica, sans-serif;">Visual Whole-Body Loco-Manipulation</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph data  TODO: modify this later-->
+    <meta property="og:image" content="img/cover.jpg">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1296">
+    <meta property="og:image:height" content="840">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wholebody-b1.github.io/"/>
+    <meta property="og:title" content="VBC: Visual Whole-Body Control for Legged Loco-Manipulation" />
+    <meta property="og:description" content="We study the problem of mobile manipulation using legged robots equipped with an arm, namely legged loco-manipulation. The robot legs, while usually utilized for mobility, offer an opportunity to amplify the manipulation capabilities by conducting whole-body control. That is, the robot can control the legs and the arm at the same time to extend its workspace. We propose a framework that can conduct the whole-body control autonomously with visual observations. Our approach, namely <b>Visual Whole-Body Control (VBC)</b>, is composed of a low-level policy using all degrees of freedom to track the end-effector manipulator position and a high-level policy proposing the end-effector position based on visual inputs. We train both levels of policies in simulation and perform Sim2Real transfer for real robot deployment. We perform extensive experiments and show significant improvements over baselines in picking up diverse objects in different configurations (heights, locations, orientations) and environments." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VBC: Visual Whole-Body Control for Legged Loco-Manipulation" />
+    <meta name="twitter:description" content="We study the problem of mobile manipulation using legged robots equipped with an arm, namely legged loco-manipulation. The robot legs, while usually utilized for mobility, offer an opportunity to amplify the manipulation capabilities by conducting whole-body control. That is, the robot can control the legs and the arm at the same time to extend its workspace. We propose a framework that can conduct the whole-body control autonomously with visual observations. Our approach, namely <b>Visual Whole-Body Control (VBC)</b>, is composed of a low-level policy using all degrees of freedom to track the end-effector manipulator position and a high-level policy proposing the end-effector position based on visual inputs. We train both levels of policies in simulation and perform Sim2Real transfer for real robot deployment. We perform extensive experiments and show significant improvements over baselines in picking up diverse objects in different configurations (heights, locations, orientations) and environments." />
+    <meta name="twitter:image" content="img/cover.jpg" />
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+    <link rel="icon" href="./favicon.ico">
+
+</head>
+
+<body>
+    <div id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center" style="font-size: 48px;">
+                <b>VBC</b>: <b>V</b>isual Whole-<b>B</b>ody <b>C</b>ontrol <br> for Legged Loco-Manipulation</br> 
+            </h2>
+        </div> <br>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://minghuanliu.com" style="font-size: 22px;">
+                          Minghuan Liu
+                        </a>
+                        <sup style="font-size: 18px;">*,1,2</sup>
+                    </li>
+                    <li>
+                        <a href="https://zixuan417.github.io" style="font-size: 22px;">
+                            Zixuan Chen
+                        </a>
+                        <sup style="font-size: 18px;">*,1,3</sup>
+                    </li>
+                    <li>
+                        <a href="https://chengxuxin.github.io" style="font-size: 22px;">
+                          Xuxin Cheng
+                        </a>
+                        <sup style="font-size: 18px;">1</sup>
+                        <!-- </br>Harvard University -->
+                    </li>
+                    <li>
+                        <a href="https://yandongji.github.io" style="font-size: 22px;">
+                          Yandong Ji
+                        </a>
+                        <sup style="font-size: 18px;">1</sup>
+                        <!-- </br>Google -->
+                    </li>
+                    <li>
+                        <a href="https://rchalyang.github.io" style="font-size: 22px;">
+                          Ruihan Yang
+                        </a>
+                        <sup style="font-size: 18px;">1</sup>
+                        <!-- </br>Google -->
+                    </li>
+                    <li>
+                        <a href="https://xiaolonw.github.io" style="font-size: 22px;">
+                          Xiaolong Wang
+                        </a>
+                        <sup style="font-size: 18px;">1</sup>
+                        <!-- </br>Google -->
+                    </li><br>
+                    <li>
+                        <sup style="font-size: 18px;">1</sup><font size="5">UC San Diego</font>
+                    </li>
+                    <li>
+                        <sup style="font-size: 18px;">2</sup><font size="5">Shanghai Jiao Tong University</font>
+                    </li>
+                    <li>
+                        <sup style="font-size: 18px;">3</sup><font size="5">Fudan University</font>
+                    </li><br>
+                    <li>
+                        <sup style="font-size: 14px;">*</sup><font size="4">Equal contribution.</font>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/abs/2403.16967">
+                            <image src="img/paper-img.png" height="50px">
+                                <h4><strong>Arxiv</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtu.be/Kfj1ImFLoqI">
+                            <image src="img/youtube_icon.png" height="50px">
+                                <h4><strong>YouTube</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://b23.tv/EZEa0LS">
+                            <image src="img/bilibili.jpeg" height="50px">
+                                <h4><strong>Bilibili</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/xiaolonw/status/1772667935850635370">
+                            <image src="img/twitter.png" height="50px">
+                                <h4><strong>Twitter</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="https://www.youtube.com/embed/Kfj1ImFLoqI?si=bg1q94q0zv41COTD" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                        <!-- <div class="poster-image" style="position:absolute;top:0;left:0;width:100%;height:100%;background-image:url('img/youtube_cover.jpg');background-size:cover;background-position:center;display:block;"></div> -->
+            </div>
+                    </div>
+                </div>
+            </div> <br>
+            <div class="col-md-8 col-md-offset-2">
+                    <p class="text-center" style="font-size: 16px;">
+                    We propose a sim-to-real framework that enables the robot to grasp different objects in varying surroundings.
+                    </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 style="font-size: 36px; font-weight: bold; text-align:center">
+                    Abstract
+                </h3>
+                <p class="text-justify" style="font-size: 18px;">
+                    We study the problem of mobile manipulation using legged robots equipped with an arm, namely legged loco-manipulation. The robot legs, while usually utilized for mobility, offer an opportunity to amplify the manipulation capabilities by conducting whole-body control. That is, the robot can control the legs and the arm at the same time to extend its workspace. We propose a framework that can conduct the whole-body control autonomously with visual observations. Our approach, namely <b>Visual Whole-Body Control (VBC)</b>, is composed of a low-level policy using all degrees of freedom to track the end-effector manipulator position and a high-level policy proposing the end-effector position based on visual inputs. We train both levels of policies in simulation and perform Sim2Real transfer for real robot deployment. We perform extensive experiments and show significant improvements over baselines in picking up diverse objects in different configurations (heights, locations, orientations) and environments.
+                </p>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 100px; margin-left: 5px;">
+            <h3 class="col-md-8 col-md-offset-2" style="font-size: 32px; font-weight: bold; text-align:center; margin-bottom: 50px;">
+                Multi-Object Grasping Pipeline
+            </h3>
+            <div class="text-center" style="column-gap: 40px; line-height: 50px;">
+                <video id="consec1" width="34%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/comp/consec1-traj-stones-comp.mp4" type="video/mp4" />
+                </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                <video id="consec2" width="34%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/comp/consec2-beach-traj-comp.mp4" type="video/mp4" />
+                </video><br>
+                <video id="consec3" width="34%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/comp/consec3-3301-traj-comp.mp4" type="video/mp4" />
+                </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                <video id="consec4" width="34%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/comp/consec4-city-clip-traj-comp.mp4" type="video/mp4" />
+                </video><br>
+                <video id="consec5" width="34%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/comp/consec5-woods-comp.mp4" type="video/mp4" />
+                </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                <video id="consec4" width="34%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/comp/consec6-home-comp.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 100px; margin-left: 5px;">
+            <h3 class="col-md-8 col-md-offset-2" style="font-size: 32px; font-weight: bold; text-align:center; margin-bottom: 50px;">
+                Visual Input Visualization
+            </h3>
+            <div class="text-center" style="column-gap: 40px; line-height: 50px;">
+                <video id="indoor_vision_chair" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/comp/indoor_vision_chair-comp.mp4" type="video/mp4" />
+                </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                <video id="outdoor_vision" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/comp/outdoor_vision-comp.mp4" type="video/mp4" />
+                </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                <video id="indoor_vision" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/comp/indoor_vision-comp.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+        
+        <div class="row" style="margin-top: 100px;">
+            <h3 class="col-md-8 col-md-offset-2" style="font-size: 32px; font-weight: bold; text-align:center; margin-bottom: 50px;">
+                More Examples
+            </h3>
+            <div class="col-md-12 text-center" style="column-gap: 40px; line-height: 50px">
+                    <video id="v1" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                        <source src="img/diff-heights/comp/home-sofa-comp.mp4" type="video/mp4" />
+                    </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <video id="v2" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                        <source src="img/diff-heights/comp/ground-hammer-comp.mp4" type="video/mp4" />
+                    </video>
+                    <video id="v3" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                        <source src="img/diff-heights/comp/ground-peach-comp.mp4" type="video/mp4" />
+                    </video><br>
+                    <video id="v4" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                        <source src="img/diff-heights/comp/ground-rope-comp.mp4" type="video/mp4" />
+                    </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <video id="v5" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                        <source src="img/diff-heights/comp/high-bottle-comp.mp4" type="video/mp4" />
+                    </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <video id="v6" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                        <source src="img/diff-heights/comp/high-hammer-comp.mp4" type="video/mp4" />
+                    </video><br>
+                    <video id="v7" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                        <source src="img/diff-heights/comp/high-rope-comp.mp4" type="video/mp4" />
+                    </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <video id="v8" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                        <source src="img/diff-heights/comp/high-butter-comp.mp4" type="video/mp4" />
+                    </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <video id="v1" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                        <source src="img/diff-heights/comp/ground-box-comp.mp4" type="video/mp4" />
+                    </video>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 100px;">
+            <h3 class="col-md-8 col-md-offset-2" style="font-size: 32px; font-weight: bold; text-align:center; margin-bottom: 50px;">
+                <a href="https://github.com/Ericonaldo/Tracking_SAM/tree/dev" style="font-size: 28px;">Tracking SAM</a> Annotation Explain
+            </h3>
+            <div class="col-md-12 text-center" style="column-gap: 40px; line-height: 50px">
+                <video id="f2" width="50%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/workflow-comp.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 100px;">
+            <h3 class="col-md-8 col-md-offset-2" style="font-size: 32px; font-weight: bold; text-align:center; margin-bottom: 50px;">
+                Representative Failure Cases
+            </h3>
+            <div class="col-md-12 text-center" style="column-gap: 40px; line-height: 50px">
+                The robot may fail due to several reasons, like the failure of the depth perception, the lost of the tracking mask, the inproper design of the Z1 gripper, and also generalization error.<br>
+                <video id="f1" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/failure-case/depth-fail-comp.mp4" type="video/mp4" />
+                </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                <video id="f2" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/failure-case/tracking-fail-comp.mp4" type="video/mp4" />
+                </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                <video id="f2" width="24%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/failure-case/box-fail-comp.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 100px;">
+            <h3 class="col-md-8 col-md-offset-2" style="font-size: 32px; font-weight: bold; text-align:center; margin-bottom: 50px;">
+                Funny Cases
+            </h3>
+            <div class="col-md-12 text-center" style="column-gap: 40px; line-height: 50px">
+                <video id="f1" width="35%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/comp/funny-1-comp.mp4" type="video/mp4" />
+                </video>&nbsp;&nbsp;&nbsp;&nbsp;
+                <video id="f2" width="35%" style="border-radius: 10px;" autoplay loop muted controls>
+                    <source src="img/videos/comp/funny-2-comp.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <section class="section" id="BibTeX">
+            <div class="container content">
+                <h2 class="titile">BibTeX</h2>
+                <pre><code>
+@article{liu2024visual,
+title={Visual Whole-Body Control for Legged Loco-Manipulation},
+author={Liu, Minghuan and Chen, Zixuan and Cheng, Xuxin and Ji, Yandong and Yang, Ruihan and Wang, Xiaolong},
+journal={arXiv preprint arXiv:2402.16796},
+year={2024}
+}
+                </code></pre>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
