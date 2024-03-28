@@ -115,7 +115,7 @@ social:
 highlight_name: true
 ---
 
-I am an incoming M.Phil student at HKUST(GZ) and also is a research assistant at [IIIS, Tsinghua University](https://iiis.tsinghua.edu.cn/en/), under the supervise of [Prof. Huazhe Xu](http://hxu.rocks/). 
+Hi! I am a first-year M.Phil student at HKUST(GZ), advised by [Prof. Jie Song](https://ait.ethz.ch/people/song). Previously, I was a research assistant at [IIIS, Tsinghua University](https://iiis.tsinghua.edu.cn/en/), under the supervise of [Prof. Huazhe Xu](http://hxu.rocks/), whose mentorship not only introduced me to the fascinating world of robotics research but also started to shape my academic path.
 
 My research interests include **Robotics**, **Optimal Control**, and **Reinforcement Learning**. I'm absolutely fascinated by robots and everything related to them — honestly, robots are the coolest thing in the world!
 
