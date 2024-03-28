@@ -1,12 +1,9 @@
 ---
 title: "Learning Visual Quadrupedal Loco-Manipulation from Demonstrations"
 date: "2024-03-29T00:00:00"
-
-# Custom links (uncomment lines below)
 links:
 - name: Custom Link
   url: www.zhengmaohe.github.io/leg-manip
-
 authors:
 - Zhengmao He
 - Kun Lei
