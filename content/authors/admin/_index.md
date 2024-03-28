@@ -115,9 +115,9 @@ social:
 highlight_name: true
 ---
 
-I am an incoming M.Phil student at HKUST(gz) and also is a research assistant at [IIIS, Tsinghua University](https://iiis.tsinghua.edu.cn/en/), under the supervise of [Prof. Huazhe Xu](http://hxu.rocks/). 
+I am an incoming M.Phil student at HKUST(GZ) and also is a research assistant at [IIIS, Tsinghua University](https://iiis.tsinghua.edu.cn/en/), under the supervise of [Prof. Huazhe Xu](http://hxu.rocks/). 
 
-My research interests include **Robotics**, **Optimal Control**, and **Reinforcement Learning**. I am passionate about exploring the potential of robots and how they can be utilized to improve our lives. 
+My research interests include **Robotics**, **Optimal Control**, and **Reinforcement Learning**. I'm absolutely fascinated by robots and everything related to them — honestly, robots are the coolest thing in the world!
 
-During my undergraduate studies, I focused on robotic competitions and developed [many interesting robots](/#projects). Now, I am shifting my passion towards research. Stay tuned for more updates!
+During my undergraduate studies, I focused on robotic competitions and developed [many interesting robots](/#projects). Now, I am shifting my passion towards research, ready to unravel how robots can dramatically change our future for the better. Stay tuned for more updates!
 {style="text-align: justify;"}
