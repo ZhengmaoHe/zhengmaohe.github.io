@@ -459,7 +459,7 @@
 
 
 <section class="section">
-  <div class="container">
+  <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column">
         <h2 class="title is-2" style="text-align: center;">Method</h2>
@@ -475,8 +475,43 @@
       </div>
       </div>
     </div>
+
+    <h3 class="title is-5 has-text-centered is-centered">1. Tracking random curve.</h3>
+    <h5>
+      <center>
+        The red ball represents the Bézier control point, </br>the small coordinate axis represents the pose of the target trajectory at that time, </br>and the big coordinate axis represents the pose of the end-effector.
+      </center>
+    </h5>
+    </br>
+    <div class="container is-rounded interpolation-panel is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-sim-button" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/random/random_batch.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+  </div>
+  <br/>
+  <br/>
+  <h3 class="title is-5 has-text-centered is-centered">2. Collect Demonstrations.</h3>
+  <h5>
+    <center>
+      We design manipulation trajectories for different tasks and collect demonstrations rapidly through parallel simulation. 
+    </center>
+  </h5>
+  </br>
+  <div class="container is-rounded interpolation-panel is-max-desktop">  
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <video poster="" id="task-sim-button" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+          <source src="./static/videos/demo/record_batch.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
   </div>
 </section>
+
 
 
 <section class="section" >
