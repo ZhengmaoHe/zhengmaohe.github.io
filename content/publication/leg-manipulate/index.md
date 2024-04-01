@@ -21,7 +21,7 @@ publication_short: "arXiv preprint, 2024"
 
 featured: true
 
-url_pdf: "https://arxiv.org/pdf/2311.03351.pdf"
+url_pdf: "https://arxiv.org/pdf/2403.20328.pdf"
 # url_code: "https://github.com/Lei-Kun/Uni-o4"
 links: [{name: "website", url: "https://zhengmaohe.github.io/leg-manip/"}]
 
