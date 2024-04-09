@@ -1,0 +1,32 @@
+{{/* Display author list. */}}
+
+{{- $taxonomy := "authors" }}
+{{ with .Param $taxonomy }}
+  {{ $link_authors := site.Params.link_authors | default true }}
+  {{ range $index, $name_raw := . }}
+    {{- $profile_page := site.GetPage (printf "/%s/%s" $taxonomy .) -}}
+    {{- $name := $profile_page.Title | default $name_raw -}}
+
+    <!-- my new commands to try and split first name & surname -->
+    {{- $name2 := replace $name " " "-" -}}
+    {{- $first_name := split $name2 "-" | first 1  -}}
+    {{- $surname := split $name2 "-" | last 1  -}}
+
+    {{- if gt $index 0 }}, {{ end -}}
+    <span {{ if site.Params.highlight_superuser | and (eq $profile_page.Params.superuser true) }}class="font-weight-bold"{{end}}>
+      {{- if and $profile_page $link_authors -}}
+        <!-- <a href="{{$profile_page.RelPermalink}}">{{$name}}</a> -->
+        <a href="{{$profile_page.RelPermalink}}">
+        {{- range first 1 $first_name -}}{{- substr . 0 1 }} {{ end -}}
+        {{- range first 1 $surname -}}{{- .}}{{end}}</a>
+      {{- else -}}
+        {{$name}}
+      {{- end -}}
+    </span>
+    {{- if isset $.Params "author_notes" -}}
+      {{- with (index $.Params.author_notes $index) -}}
+        <span title="{{.}}" class="author-notes">(?)</span>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

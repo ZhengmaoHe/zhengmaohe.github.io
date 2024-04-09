@@ -4,7 +4,7 @@ date: "2024-03-29T00:00:00"
 links:
 - name: Custom Link
   url: https://zhengmaohe.github.io/leg-manip/
-external_link: https://www.zhengmaohe.github.io/leg-manip
+external_link: https://zhengmaohe.github.io/leg-manip
 
 authors:
 - admin

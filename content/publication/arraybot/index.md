@@ -4,7 +4,7 @@ date: "2023-11-07T00:00:00"
 links:
 - name: Custom Link
   url: https://www.steven-xzr.github.io/ArrayBot
-external_link: https://www.steven-xzr.github.io/ArrayBot
+external_link: https://steven-xzr.github.io/ArrayBot
 
 authors:
 - Zhengrong Xue*

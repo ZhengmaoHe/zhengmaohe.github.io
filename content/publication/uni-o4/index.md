@@ -3,16 +3,20 @@ title: "Uni-O4: Unifying Online and Offline Deep Reinforcement Learning with Mul
 date: "2023-11-08T00:00:00"
 links:
 - name: Custom Link
-  url: https://https://lei-kun.github.io/uni-o4/
-external_link: https://https://lei-kun.github.io/uni-o4/
+  url: https://lei-kun.github.io/uni-o4/
+external_link: https://lei-kun.github.io/uni-o4/
 
 authors:
 - Kun Lei
-- admin *
-- Chenhao Lu*
+- admin
+- Chenhao Lu
 - Kaizhe Hu
 - Yang Gao
 - Huazhe Xu
+author_notes:
+-
+- "Equal contribution"
+- "Equal contribution"
 
 publication_types: ["0"]
 
