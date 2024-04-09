@@ -13,7 +13,7 @@ authors:
 - Zhengrong Xue*
 - Han Zhang*
 - Jingwen Cheng
-- Zhengmao He
+- admin
 - Yuanchen Ju
 - Changyi Lin
 - Gu Zhang
