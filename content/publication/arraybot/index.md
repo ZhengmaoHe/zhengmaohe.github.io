@@ -21,8 +21,8 @@ authors:
 
 publication_types: ["0"]
 
-publication: "arXiv preprint, 2023"
-publication_short: "arXiv preprint, 2023"
+publication: "IEEE International Conference on Robotics and Automation (ICRA), 2024"
+publication_short: "IEEE International Conference on Robotics and Automation (ICRA), 2024"
 
 
 
