@@ -57,18 +57,6 @@
       </div>
       {{ end }}
 
-      {{ if eq $item.Type "publication" }}
-      <div>
-        <span>
-          {{ partial "functions/get_event_dates" $item }}
-        </span>
-        {{ with $item.Params.publication }}
-        <span class="middot-divider"></span>
-        <span>{{ . }}</span>
-        {{ end }}
-      </div>
-      {{ end }}
-
       {{ if and $show_authors_only $item.Params.authors }}
       <div>
         {{ partial "page_metadata_authors" $item }}
@@ -76,6 +64,15 @@
       {{ else if not $show_authors_only }}
         {{ partial "page_metadata" (dict "page" $item "is_list" 1) }}
       {{ end }}
+
+      {{ if eq $item.Type "publication" }}
+      <div>
+        {{ with $item.Params.publication }}
+        <span>{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+
     </div>
 
     {{ if $has_attachments }}
@@ -88,7 +85,7 @@
   <div class="ml-3">
     {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
     {{ with $resource }}
-      {{ $image := .Resize "200x" }}
+      {{ $image := .Resize "300x" }}
       {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
       <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
         <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
