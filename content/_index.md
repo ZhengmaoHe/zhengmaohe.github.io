@@ -133,7 +133,8 @@ sections:
         featured_only: true
     design:
       columns: '2'
-      view: compact
+      # view: compact
+      view: community/custom
 
   - block: portfolio
     id: projects
