@@ -6,7 +6,7 @@ links:
   url: www.zhengmaohe.github.io/leg-manip
 external_link: http://www.zhengmaohe.github.io/leg-manip
 authors:
-- Zhengmao He
+- admin
 - Kun Lei
 - Yanjie Ze
 - Koushil Sreenath
