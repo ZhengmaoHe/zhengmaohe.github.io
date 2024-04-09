@@ -1,11 +1,10 @@
 ---
 title: "Uni-O4: Unifying Online and Offline Deep Reinforcement Learning with Multi-Step On-Policy Optimization"
 date: "2023-11-08T00:00:00"
-# url: "www.github.com/Lei-Kun/Uni-o4"
 links:
 - name: Custom Link
-  url: www.github.com/Lei-Kun/Uni-o4
-external_link: http://www.github.com/Lei-Kun/Uni-o4
+  url: https://https://lei-kun.github.io/uni-o4/
+external_link: https://https://lei-kun.github.io/uni-o4/
 authors:
 - Kun Lei
 - admin*
