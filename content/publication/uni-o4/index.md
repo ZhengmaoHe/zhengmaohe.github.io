@@ -5,9 +5,10 @@ links:
 - name: Custom Link
   url: https://https://lei-kun.github.io/uni-o4/
 external_link: https://https://lei-kun.github.io/uni-o4/
+
 authors:
 - Kun Lei
-- admin*
+- admin *
 - Chenhao Lu*
 - Kaizhe Hu
 - Yang Gao
