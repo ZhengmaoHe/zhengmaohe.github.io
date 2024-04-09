@@ -5,7 +5,7 @@ date: "2023-11-08T00:00:00"
 links:
 - name: Custom Link
   url: www.github.com/Lei-Kun/Uni-o4
-# external_link: www.github.com/Lei-Kun/Uni-o4
+external_link: www.github.com/Lei-Kun/Uni-o4
 authors:
 - Kun Lei
 - **Zhengmao He** *
