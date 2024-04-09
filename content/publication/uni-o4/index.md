@@ -8,7 +8,7 @@ links:
 external_link: www.github.com/Lei-Kun/Uni-o4
 authors:
 - Kun Lei
-- **Zhengmao He** *
+- Zhengmao He*
 - Chenhao Lu*
 - Kaizhe Hu
 - Yang Gao
