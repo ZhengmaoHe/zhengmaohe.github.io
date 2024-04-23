@@ -98,9 +98,9 @@ social:
     label: Follow me on Twitter
     display:
       header: true
-  # - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
-  #   icon_pack: fas
-  #   link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
+    icon_pack: fas
+    link: https://scholar.google.co.uk/citations?user=5V4-nhsAAAAJ
   - icon: github
     icon_pack: fab
     link: https://github.com/ZhengmaoHe
