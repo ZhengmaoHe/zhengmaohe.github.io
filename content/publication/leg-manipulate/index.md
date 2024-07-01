@@ -18,8 +18,8 @@ authors:
 
 publication_types: ["0"]
 
-publication: "arXiv preprint, 2024"
-publication_short: "arXiv preprint, 2024"
+publication: "International Conference on Intelligent Robots and Systems (IROS), 2024"
+publication_short: "International Conference on Intelligent Robots and Systems (IROS), 2024"
 
 
 
