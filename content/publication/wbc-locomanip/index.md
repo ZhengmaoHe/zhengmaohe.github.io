@@ -1,12 +1,12 @@
 ---
 title: "Learning Whole-Body Redundant Control with Partial Kinematic Embedding"
-date: "2024-03-29T00:00:00"
+date: "2024-10-29T00:00:00"
 # summary: We proposed a hierarchical learning framework for loco-manipulate that harnesses the strengths of both BC and RL.
 
 links:
-- name: Custom Link
-  url: https://zhengmaohe.github.io/
-external_link: https://zhengmaohe.github.io/
+# - name: Custom Link
+#   url: https://zhengmaohe.github.io/
+# external_link: https://zhengmaohe.github.io/
 
 authors:
 - admin
