@@ -16,8 +16,8 @@ authors:
 
 publication_types: ["0"]
 
-publication: "Ongoing Work"
-publication_short: "Ongoing Work"
+publication: "Ongoing Project"
+publication_short: "Ongoing Project"
 
 
 
