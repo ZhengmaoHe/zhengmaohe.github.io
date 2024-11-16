@@ -115,9 +115,12 @@ social:
 highlight_name: true
 ---
 
-Hi! I am a first-year M.Phil student at HKUST(GZ), advised by [Prof. Jie Song](https://ait.ethz.ch/people/song) and [Prof. Jemin Hwangbo](https://scholar.google.ch/citations?user=Uam1ZB8AAAAJ&hl=en). Previously, I was a research assistant at [IIIS, Tsinghua University](https://iiis.tsinghua.edu.cn/en/), under the supervise of [Prof. Huazhe Xu](http://hxu.rocks/), whose mentorship not only introduced me to the fascinating world of robotics research but also started to shape my academic path.
+Hi! I am a first-year M.Phil student at HKUST(GZ), advised by [Prof. Jie Song](https://ait.ethz.ch/people/song) and [Prof. Jemin Hwangbo](https://scholar.google.ch/citations?user=Uam1ZB8AAAAJ&hl=en). Previously, I was a research assistant at [IIIS, Tsinghua University](https://iiis.tsinghua.edu.cn/en/), under the supervision of [Prof. Huazhe Xu](http://hxu.rocks/), whose mentorship not only introduced me to the fascinating world of robotics research but also started to shape my academic path.
 
 My research interests include **Robotics**, **Reinforcement Learning**, and **Optimal Control**. I'm absolutely fascinated by robots and everything related to them — honestly, robots are the coolest thing in the world!
 
 During my undergraduate studies, I focused on robotic competitions and developed [many interesting robots](/#projects). Now, I am shifting my passion towards research, ready to unravel how robots can dramatically change our future for the better. Stay tuned for more updates!
+
+Outside of research, I find creative expression in music as the lead guitarist of 1a2b🎸.
+
 {style="text-align: justify;"}
