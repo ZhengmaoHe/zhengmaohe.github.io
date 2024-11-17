@@ -121,6 +121,6 @@ My research interests include **Robotics**, **Reinforcement Learning**, and **Op
 
 During my undergraduate studies, I focused on robotic competitions and developed [many interesting robots](/#projects). Now, I am shifting my passion towards research, ready to unravel how robots can dramatically change our future for the better. Stay tuned for more updates!
 
-Outside of research, I find creative expression in music as the lead guitarist of 1a2b🎸.
+Outside of research, I find creative expression in music as the lead guitarist of 1a2b band🎸.
 
 {style="text-align: justify;"}
